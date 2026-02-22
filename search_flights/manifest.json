@@ -1,0 +1,39 @@
+{
+  "name": "search_flights",
+  "description": "Search for flights on a specific date. Origin and destination accept one or more comma-separated IATA airport codes (e.g. 'LHR,LGW,STN' to search all London airports).",
+  "entrypoint": "run.py",
+  "parameters": {
+    "origin": {
+      "type": "string",
+      "description": "Departure airport IATA code(s), comma-separated (e.g. 'JFK' or 'LHR,LGW,STN')."
+    },
+    "destination": {
+      "type": "string",
+      "description": "Arrival airport IATA code(s), comma-separated (e.g. 'JFK' or 'LHR,LGW,STN')."
+    },
+    "departure_date": {
+      "type": "string",
+      "description": "Travel date in YYYY-MM-DD format."
+    },
+    "return_date": {
+      "type": "string",
+      "description": "Return date in YYYY-MM-DD format for round trips. Omit for one-way."
+    },
+    "cabin_class": {
+      "type": "string",
+      "description": "Cabin class: ECONOMY, PREMIUM_ECONOMY, BUSINESS, or FIRST. Defaults to ECONOMY."
+    },
+    "max_stops": {
+      "type": "string",
+      "description": "Maximum stops: ANY, NON_STOP, ONE_STOP_OR_FEWER, or TWO_OR_FEWER_STOPS. Defaults to ANY."
+    },
+    "passengers": {
+      "type": "integer",
+      "description": "Number of adult passengers. Defaults to 1."
+    },
+    "sort_by": {
+      "type": "string",
+      "description": "Sort order: CHEAPEST, DURATION, DEPARTURE_TIME, or ARRIVAL_TIME. Defaults to CHEAPEST."
+    }
+  }
+}
