@@ -116,7 +116,15 @@ def main() -> None:
     search = SearchFlights()
     results = search.search(filters)
 
-    flights = [format_flight(f) for f in results] if results else []
+    # One-way searches return a flat list of FlightResult. Round-trip searches
+    # return a list of (outbound_FlightResult, return_FlightResult) tuples.
+    if return_date:
+        flights = [
+            {"outbound": format_flight(out), "return": format_flight(ret)}
+            for out, ret in results
+        ] if results else []
+    else:
+        flights = [format_flight(f) for f in results] if results else []
     json.dump({"flights": flights, "count": len(flights)}, sys.stdout)
 
 
