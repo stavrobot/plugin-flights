@@ -1,0 +1,15 @@
+{
+  "name": "flight_status",
+  "description": "Get the current status of a flight by flight number. If no date is provided, the API returns the flight on the nearest date (past or future) relative to today. Returns status, schedule, gate, terminal, and aircraft information.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "flight_number": {
+      "type": "string",
+      "description": "Flight number, e.g. 'BA123' or 'KL1395'."
+    },
+    "date": {
+      "type": "string",
+      "description": "Local date in YYYY-MM-DD format. If omitted, returns the flight on the nearest date (past or future)."
+    }
+  }
+}

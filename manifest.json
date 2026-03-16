@@ -1,4 +1,10 @@
 {
   "name": "flights",
-  "description": "Search Google Flights for one-way or round-trip flights and cheapest travel dates."
+  "description": "Search Google Flights for one-way or round-trip flights and cheapest travel dates. Also look up real-time flight status and delay statistics via AeroDataBox.",
+  "config": {
+    "rapidapi_key": {
+      "description": "RapidAPI key for AeroDataBox API. Sign up at https://rapidapi.com/aedbx-aedbx/api/aerodatabox",
+      "required": false
+    }
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "flight_delays",
+  "description": "Returns average delay statistics for a flight based on the last 90 days of tracked data. Useful for knowing if a flight is chronically late before booking.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "flight_number": {
+      "type": "string",
+      "description": "Flight number, e.g. 'KL1395' or 'BA123'."
+    }
+  }
+}
